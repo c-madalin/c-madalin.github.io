@@ -1,39 +1,70 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>404 - Pagina nu a fost găsită</title>
-  <style>
-    body {
-      background-color: #f2f2f2;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 100px;
-    }
-    h1 {
-      font-size: 100px;
-      color: #ff6f61;
-    }
-    p {
-      font-size: 24px;
-    }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ff6f61;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-    a:hover {
-      background-color: #e65b50;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Madalin Cazan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: var(--light-color);
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .error-message {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .error-description {
+            max-width: 500px;
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+        }
+
+        .error-icon {
+            font-size: 80px;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>404</h1>
-  <p>Ne pare rău, pagina pe care o cauți nu există.</p>
-  <a href="/">Înapoi la pagina principală</a>
+    <div class="error-container">
+        <i class="fas fa-map-signs error-icon"></i>
+        <div class="error-code">404</div>
+        <h1 class="error-message">Page Not Found</h1>
+        <p class="error-description">The page you're looking for doesn't exist or has been moved. Let's get you back on track!</p>
+        <a href="index.html" class="btn btn-primary">Back to Homepage</a>
+    </div>
 </body>
 </html>
