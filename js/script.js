@@ -5,48 +5,110 @@
  */
 
 // Wait for DOM to be fully loaded
+
+// JavaScript pentru animația timeline-ului simplificat
 document.addEventListener('DOMContentLoaded', function() {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
-    const navLinks = document.querySelectorAll('.nav-links li');
-    
-    if (burger) {
-        burger.addEventListener('click', function() {
-            // Toggle navigation
-            nav.classList.toggle('nav-active');
+    // Funcție pentru a anima elementele din timeline când sunt vizibile
+    function showTimelineItems() {
+        const expItems = document.querySelectorAll('.exp-item');
+        
+        expItems.forEach(item => {
+            const itemPosition = item.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
             
-            // Animate links
-            navLinks.forEach((link, index) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                } else {
-                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                }
-            });
-            
-            burger.classList.toggle('toggle');
+            if (itemPosition < screenPosition) {
+                item.classList.add('visible');
+            }
         });
     }
     
-    const scrollLinks = document.querySelectorAll('a[href^="#"]');
+    // Apelează funcția o dată la încărcarea paginii
+    showTimelineItems();
     
-    scrollLinks.forEach(link => {
+    // Adaugă event listener pentru scroll
+    window.addEventListener('scroll', showTimelineItems);
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // Get DOM elements
+    const sidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.main-content');
+    const sidebarOverlay = document.querySelector('.sidebar-overlay');
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const headerNav = document.querySelector('.header-nav');
+    const sidebarLinks = document.querySelectorAll('.sidebar-link');
+    const headerLinks = document.querySelectorAll('.header-nav a');
+    const sections = document.querySelectorAll('section');
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    const contactForm = document.getElementById('contactForm');
+    
+    // Toggle mobile navigation
+    if (mobileNavToggle) {
+        mobileNavToggle.addEventListener('click', function() {
+            headerNav.classList.toggle('active');
+            
+            // Toggle icon
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    }
+    
+    // Toggle sidebar on mobile
+    document.addEventListener('click', function(e) {
+        // Close sidebar if clicking outside
+        if (window.innerWidth <= 991 && sidebar.classList.contains('active') && 
+            !sidebar.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+        }
+        
+        // Close header navigation if clicking outside
+        if (window.innerWidth <= 768 && headerNav.classList.contains('active') && 
+            !headerNav.contains(e.target) && !mobileNavToggle.contains(e.target)) {
+            headerNav.classList.remove('active');
+            // Reset icon
+            const icon = mobileNavToggle.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+    
+    // Toggle sidebar for mobile
+    if (mobileNavToggle) {
+        mobileNavToggle.addEventListener('click', function() {
+            if (window.innerWidth <= 991) {
+                sidebar.classList.toggle('active');
+                sidebarOverlay.classList.toggle('active');
+            }
+        });
+    }
+    
+    // Close sidebar when clicking on overlay
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', function() {
+            sidebar.classList.remove('active');
+            this.classList.remove('active');
+        });
+    }
+    
+    // Smooth scrolling for sidebar navigation
+    sidebarLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                // Close mobile menu if open
-                if (nav.classList.contains('nav-active')) {
-                    nav.classList.remove('nav-active');
-                    burger.classList.remove('toggle');
-                    navLinks.forEach(link => {
-                        link.style.animation = '';
-                    });
+                // Close mobile sidebar if open
+                if (window.innerWidth <= 991) {
+                    sidebar.classList.remove('active');
+                    sidebarOverlay.classList.remove('active');
                 }
                 
                 // Scroll to target
@@ -54,42 +116,87 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetElement.offsetTop - 70, // Adjust for header height
                     behavior: 'smooth'
                 });
+                
+                // Update active link
+                sidebarLinks.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
             }
         });
     });
     
-    // Handle active navigation based on scroll position
-    const sections = document.querySelectorAll('section');
-    const navItems = document.querySelectorAll('.nav-links a');
+    // Smooth scrolling for header navigation
+    headerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Skip for links to other pages
+            if (this.getAttribute('href').includes('html')) return;
+            
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // Close mobile menu if open
+                if (window.innerWidth <= 768 && headerNav.classList.contains('active')) {
+                    headerNav.classList.remove('active');
+                    const icon = mobileNavToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+                
+                // Scroll to target
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70, // Adjust for header height
+                    behavior: 'smooth'
+                });
+                
+                // Update active link
+                headerLinks.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            }
+        });
+    });
     
-    function setActiveNav() {
-        let scrollPosition = window.scrollY + 100;
+    // Handle active navigation links based on scroll position
+    function setActiveLinks() {
+        let currentSection = '';
         
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 100;
-            const sectionBottom = sectionTop + section.offsetHeight;
+            const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
             
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                navItems.forEach(item => {
-                    item.classList.remove('active');
-                    if (item.getAttribute('href') === `#${sectionId}`) {
-                        item.classList.add('active');
-                    }
-                });
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = sectionId;
             }
         });
+        
+        if (currentSection) {
+            // Update sidebar links
+            sidebarLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Update header links
+            headerLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
     }
     
     // Call once on page load
-    setActiveNav();
+    setActiveLinks();
     
     // Listen for scroll events
-    window.addEventListener('scroll', setActiveNav);
+    window.addEventListener('scroll', setActiveLinks);
     
     // Timeline animation on scroll
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    
     function showTimelineItems() {
         timelineItems.forEach(item => {
             const itemPosition = item.getBoundingClientRect().top;
@@ -108,8 +215,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', showTimelineItems);
     
     // Form submission handling
-    const contactForm = document.getElementById('contactForm');
-    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -122,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Simple validation
             if (!name || !email || !subject || !message) {
-                alert('Please fill out all fields.');
+                alert('Te rugăm să completezi toate câmpurile.');
                 return;
             }
             
@@ -130,12 +235,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // For GitHub Pages, you might use a service like Formspree
             
             // For now, just show a success message
-            alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
+            alert(`Mulțumesc pentru mesaj, ${name}! Te voi contacta în curând.`);
             contactForm.reset();
         });
     }
     
-    // Add animated typing effect to hero section
+    // Typing effect for hero section
     const heroText = document.querySelector('.hero p');
     
     if (heroText) {
@@ -154,10 +259,58 @@ document.addEventListener('DOMContentLoaded', function() {
         // Start the animation
         setTimeout(typeWriter, 1000);
     }
-});
-
-// Set current year in footer copyright
-document.addEventListener('DOMContentLoaded', function() {
+    
+    // Project filtering (if on projects page)
+    const projectFilters = document.querySelectorAll('.project-filter');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (projectFilters.length > 0) {
+        projectFilters.forEach(filter => {
+            filter.addEventListener('click', function() {
+                // Remove active class from all filters
+                projectFilters.forEach(f => f.classList.remove('active'));
+                
+                // Add active class to clicked filter
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (category === 'all') {
+                        card.style.display = 'block';
+                    } else {
+                        const cardCategories = card.getAttribute('data-categories');
+                        if (cardCategories && cardCategories.includes(category)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+    }
+    
+    // Resize handler
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            // Reset sidebar for desktop
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+        }
+        
+        if (window.innerWidth > 768) {
+            // Reset header nav for desktop
+            headerNav.classList.remove('active');
+            const icon = mobileNavToggle.querySelector('i');
+            if (icon.classList.contains('fa-times')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    });
+    
+    // Set current year in footer copyright
     const yearElement = document.querySelector('.current-year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();

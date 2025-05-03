@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | Madalin Cazan</title>
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .error-container {
@@ -13,9 +15,8 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            min-height: 100vh;
+            min-height: calc(100vh - var(--header-height));
             padding: 20px;
-            background-color: var(--light-color);
         }
 
         .error-code {
@@ -56,15 +57,92 @@
                 transform: scale(1);
             }
         }
+        
+        @media (max-width: 991px) {
+            .error-container {
+                min-height: 100vh;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="error-container">
-        <i class="fas fa-map-signs error-icon"></i>
-        <div class="error-code">404</div>
-        <h1 class="error-message">Page Not Found</h1>
-        <p class="error-description">The page you're looking for doesn't exist or has been moved. Let's get you back on track!</p>
-        <a href="index.html" class="btn btn-primary">Back to Homepage</a>
-    </div>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/images/poza_diploma.jpg" alt="Madalin Cazan" class="sidebar-avatar">
+            <h3>Madalin Cazan</h3>
+            <p>Student & Teacher</p>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html#about" class="sidebar-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="index.html#experience" class="sidebar-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="index.html#projects" class="sidebar-link"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="index.html#contact" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="social-icons">
+                <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:cazanmadalin12@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header with navigation -->
+        <header class="main-header">
+            <div class="container header-container">
+                <div class="logo">MC</div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/projects.html">All Projects</a></li>
+                        <li><a href="pages/resume.html">Resume</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Error Content -->
+        <div class="error-container">
+            <i class="fas fa-map-signs error-icon"></i>
+            <div class="error-code">404</div>
+            <h1 class="error-message">Pagină negăsită</h1>
+            <p class="error-description">Pagina pe care o cauți nu există sau a fost mutată. Hai să te readucem pe drumul cel bun!</p>
+            <a href="index.html" class="btn btn-primary">Înapoi la pagina principală</a>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <p>&copy; <span class="current-year">2025</span> Madalin Cazan. Toate drepturile rezervate.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="index.html#experience">Experience</a>
+                        <a href="index.html#projects">Projects</a>
+                        <a href="pages/blog.html">Blog</a>
+                        <a href="index.html#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
 </html>

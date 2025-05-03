@@ -3,22 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects | Madalin Cazan</title>
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Projects specific styles -->
+    <link rel="stylesheet" href="../css/projects.css">
 </head>
-
 <body>
-    <header>
-        <h1>My Projects</h1>
-        <nav>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../assets/images/poza_diploma.jpg" alt="Madalin Cazan" class="sidebar-avatar">
+            <h3>Madalin Cazan</h3>
+            <p>Student & Teacher</p>
+        </div>
+        <nav class="sidebar-nav">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="../index.html#about" class="sidebar-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="../index.html#experience" class="sidebar-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="../index.html#projects" class="sidebar-link"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="../index.html#contact" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
         </nav>
-    </header>
+        <div class="sidebar-footer">
+            <div class="social-icons">
+                <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:cazanmadalin12@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header with navigation -->
+        <header class="main-header">
+            <div class="container header-container">
+                <div class="logo">MC</div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="projects.html" class="active">All Projects</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Projects Header -->
+        <section class="projects-header">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p>A collection of personal and academic projects I've worked on</p>
+                
+                <div class="projects-filter">
+                    <div class="filter-button active" data-filter="all">All</div>
+                    <div class="filter-button" data-filter="cpp">C/C++</div>
+                    <div class="filter-button" data-filter="java">Java</div>
+                    <div class="filter-button" data-filter="ai">AI</div>
+                    <div class="filter-button" data-filter="web">Web</div>
+                    <div class="filter-button" data-filter="csharp">C#</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects Grid -->
+        <section class="projects-grid-section section">
+            <div class="container">
+                <div class="projects-grid">
+                    <!-- Quizzard -->
+                    <div class="project-card" data-categories="ai,web,python">
+                        <div class="project-img">
+                            <img src="../assets/images/project-quizzard.jpg" alt="Quizzard Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Quizzard</h3>
+                            <p>AI-powered educational platform enhancing learning through interactive document-based studying and adaptive quizzes. Developed during CodeStorm Hackathon.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">AI Models</span>
+                                <span class="tech-tag">Chroma DB</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/Quizzards" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="project-quizzard.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lan Server Chat -->
+                    <div class="project-card" data-categories="cpp,networking">
+                        <div class="project-img">
+                            <img src="../assets/images/project-chat.jpg" alt="Lan Server Chat Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Lan Server Chat</h3>
+                            <p>Multi-client chat application using C++ and Winsock2 library. The server, hosted on an Android device via Termux, broadcasts messages to all connected clients.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Winsock2</span>
+                                <span class="tech-tag">Termux</span>
+                                <span class="tech-tag">Networking</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/Server_Client_Chat" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="project-chat.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Museum Exploration -->
+                    <div class="project-card" data-categories="cpp,graphics">
+                        <div class="project-img">
+                            <img src="../assets/images/project-museum.jpg" alt="Museum Exploration Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Museum Exploration</h3>
+                            <p>3D digital tour of the Antipa Museum developed in C++ using OpenGL libraries, offering an interactive experience with 3D models, textures, and shaders.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">OpenGL</span>
+                                <span class="tech-tag">GLFW</span>
+                                <span class="tech-tag">3D Graphics</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/AntipaMuseumProject" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://www.youtube.com/watch?v=_X5oz5oPRhQ" target="_blank" class="project-link"><i class="fab fa-youtube"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Student Management System -->
+                    <div class="project-card" data-categories="java,web">
+                        <div class="project-img">
+                            <img src="../assets/images/project-sms.jpg" alt="Student Management System Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Student Management System</h3>
+                            <p>A full-stack application for managing student records using Java, Spring Boot, PostgreSQL database, and a web interface built with Thymeleaf.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">Thymeleaf</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/Springboot-Student-Catalog" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="project-sms.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Calculator -->
+                    <div class="project-card" data-categories="csharp">
+                        <div class="project-img">
+                            <img src="../assets/images/project-calculator.jpg" alt="Calculator Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Calculator</h3>
+                            <p>A functional calculator developed using WPF and C#, providing essential arithmetic operations and advanced features like memory management and programmer mode.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">WPF</span>
+                                <span class="tech-tag">XAML</span>
+                                <span class="tech-tag">MVVM</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/Calculator" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="project-calculator.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AFD & Regex Compiler -->
+                    <div class="project-card" data-categories="cpp,csharp">
+                        <div class="project-img">
+                            <img src="../assets/images/project-compiler.jpg" alt="AFD & Regex Compiler Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>AFD & Regex Compiler</h3>
+                            <p>Compiler that implements a Deterministic Finite Automaton in C++ and converts regular expressions into equivalent finite automatons, generating corresponding C++ code.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">ANTLR4</span>
+                                <span class="tech-tag">Automata Theory</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/Compiler" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="project-compiler.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Graph Visualization -->
+                    <div class="project-card" data-categories="java">
+                        <div class="project-img">
+                            <img src="../assets/images/project-graphdraw.jpg" alt="Graph Visualization Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Graph Visualization</h3>
+                            <p>JavaFX-based application that allows users to create and visualize graphs. Users can add nodes and edges, adjust weights, and apply various graph traversal and pathfinding algorithms in real time.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">JavaFX</span>
+                                <span class="tech-tag">Algorithms</span>
+                                <span class="tech-tag">Data Structures</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/GraphDraw" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="project-graphdraw.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Memory Game -->
+                    <div class="project-card" data-categories="cpp">
+                        <div class="project-img">
+                            <img src="../assets/images/project-memory.jpg" alt="Memory Game Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Memory Game</h3>
+                            <p>Memory Game is a C++ application built using the MVVM pattern, designed to enhance memory skills through interactive gameplay.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">MVVM</span>
+                                <span class="tech-tag">Game Development</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/Memo" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="project-memory.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Minecraft Server -->
+                    <div class="project-card" data-categories="systems">
+                        <div class="project-img">
+                            <img src="../assets/images/project-minecraft.jpg" alt="Minecraft Server Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Minecraft Server</h3>
+                            <p>Mobile Minecraft server hosted on an Android device using Termux, exploring the capabilities of running servers on mobile devices.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Termux</span>
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Linux</span>
+                                <span class="tech-tag">Server Administration</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="project-minecraft.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <p>&copy; 2025 Madalin Cazan. All Rights Reserved.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="../index.html">Home</a>
+                        <a href="../index.html#about">About</a>
+                        <a href="../index.html#experience">Experience</a>
+                        <a href="../index.html#projects">Projects</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="../index.html#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- JavaScript -->
+    <script src="../js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Filter projects
+                    projectCards.forEach(card => {
+                        const categories = card.getAttribute('data-categories');
+                        
+                        if (filter === 'all' || categories.includes(filter)) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
-    
+</html>

@@ -4,324 +4,367 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madalin Cazan - Portfolio</title>
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Madalin Cazan</div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="pages/blog.html">Blog</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </nav>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/images/poza_diploma.jpg" alt="Madalin Cazan" class="sidebar-avatar">
+            <h3>Madalin Cazan</h3>
+            <p>Student & Teacher</p>
         </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="assets/images/poza_diploma.jpg" alt="Madalin Cazan" class="profile-photo">
-                <h1>Madalin Cazan</h1>
-                <p>Student & Teacher | Applied Informatics</p>
-                <div class="hero-buttons">
-                    <a href="assets/CV_Madalin_Cazan.pdf" class="btn btn-primary" download>Download CV</a>
-                    <a href="#projects" class="btn btn-secondary">View My Projects</a>
-                </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#about" class="sidebar-link"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#experience" class="sidebar-link"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#projects" class="sidebar-link"><i class="fas fa-code"></i> Projects</a></li>
+                <li><a href="#contact" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="social-icons">
+                <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:cazanmadalin12@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
-    </section>
+    </aside>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Header with navigation -->
+        <header class="main-header">
+            <div class="container header-container">
+                <div class="logo">MC</div>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/projects.html">All Projects</a></li>
+                        <li><a href="pages/resume.html">Resume</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Hello! I'm Madalin Cazan</h3>
-                    <p>I study Applied Informatics at the Faculty of Mathematics and Computer Science in Brasov, and I'm always looking to grow and learn more about myself and the world around me. I love exploring new ideas and perspectives. I have a logical mindset and often find myself asking, "Why?"—a question that keeps me curious and pushes me to understand how things work on a deeper level.</p>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Madalin Cazan</h1>
+                    <p>Student & Teacher | Applied Informatics</p>
+                    <div class="hero-buttons">
+                        <a href="assets/CV_Madalin_Cazan.pdf" class="btn btn-primary" download>Download CV</a>
+                        <a href="#projects" class="btn btn-secondary">View My Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Hello! I'm Madalin Cazan</h3>
+                        <p>I study Applied Informatics at the Faculty of Mathematics and Computer Science in Brasov, and I'm always looking to grow and learn more about myself and the world around me. I love exploring new ideas and perspectives. I have a logical mindset and often find myself asking, "Why?"—a question that keeps me curious and pushes me to understand how things work on a deeper level.</p>
+                        
+                        <div class="skills">
+                            <h3>Technical Skills</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">C/C++</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Spring Boot</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Android Development</span>
+                                <span class="skill-tag">Kotlin</span>
+                                <span class="skill-tag">WPF</span>
+                                <span class="skill-tag">Flask</span>
+                                <span class="skill-tag">AI Models Integration</span>
+                                <span class="skill-tag">OpenGL</span>
+                                <span class="skill-tag">MVVM Pattern</span>
+                                <span class="skill-tag">Data Structures</span>
+                                <span class="skill-tag">Algorithms</span>
+                            </div>
+                        </div>
+                        
+                        <div class="hobbies">
+                            <h3>Hobbies & Interests</h3>
+                            <ul>
+                                <li><i class="fas fa-hiking"></i> Outdoor activities: hiking, skiing, volleyball</li>
+                                <li><i class="fas fa-utensils"></i> Cooking and sharing meals with friends</li>
+                                <li><i class="fas fa-brain"></i> Psychology and understanding human behavior</li>
+                                <li><i class="fas fa-book"></i> Philosophy and exploring new ideas that challenge my thinking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience & Education Section -->
+        <!-- Experience & Education Section with Simplified Timeline -->
+<section id="experience" class="experience section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Experience & Education</h2>
+        </div>
+        <div class="experience-container">
+            <!-- Education Timeline -->
+            <div class="experience-column">
+                <h3 class="column-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                <div class="exp-timeline">
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <span class="exp-date">2023 - Present</span>
+                            <h4>Applied Informatics</h4>
+                            <p class="exp-place">Faculty of Mathematics and Computer Science, UNITBV</p>
+                            <p>Studying data structures, algorithms, and mathematical fundamentals at UNITBV Brasov.</p>
+                        </div>
+                    </div>
                     
-                    <div class="skills">
-                        <h3>Technical Skills</h3>
-                        <div class="skill-tags">
-                            <span class="skill-tag">C/C++</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">Spring Boot</span>
-                            <span class="skill-tag">C#</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Android Development</span>
-                            <span class="skill-tag">Kotlin</span>
-                            <span class="skill-tag">WPF</span>
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">AI Models Integration</span>
-                            <span class="skill-tag">OpenGL</span>
-                            <span class="skill-tag">MVVM Pattern</span>
-                            <span class="skill-tag">Data Structures</span>
-                            <span class="skill-tag">Algorithms</span>
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <span class="exp-date">February 2025 - Present</span>
+                            <h4>CST Academy</h4>
+                            <p class="exp-place">Cornerstone Technologies International</p>
+                            <p>Learning Android development with Java and Kotlin.</p>
                         </div>
                     </div>
                     
-                    <div class="hobbies">
-                        <h3>Hobbies & Interests</h3>
-                        <ul>
-                            <li><i class="fas fa-hiking"></i> Outdoor activities: hiking, skiing, volleyball</li>
-                            <li><i class="fas fa-utensils"></i> Cooking and sharing meals with friends</li>
-                            <li><i class="fas fa-brain"></i> Psychology and understanding human behavior</li>
-                            <li><i class="fas fa-book"></i> Philosophy and exploring new ideas that challenge my thinking</li>
-                        </ul>
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <span class="exp-date">February 2025 - Present</span>
+                            <h4>Build the software, Build the future</h4>
+                            <p class="exp-place">Elektrobit</p>
+                            <p>Software engineering course covering requirements, design, and agile methodologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Work Experience Timeline -->
+            <div class="experience-column">
+                <h3 class="column-title"><i class="fas fa-briefcase"></i> Experience</h3>
+                <div class="exp-timeline">
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <span class="exp-date">October 2024 - Present</span>
+                            <h4>Teacher</h4>
+                            <p class="exp-place">Learning Refactored Association</p>
+                            <p>Teaching Scratch to children as part of the CoderDojo initiative.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <span class="exp-date">January 2024 - August 2024</span>
+                            <h4>Project Manager</h4>
+                            <p class="exp-place">AIESEC</p>
+                            <p>Led a Global Volunteering project in a local school.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exp-item">
+                        <div class="exp-dot"></div>
+                        <div class="exp-content">
+                            <span class="exp-date">October 2023 - January 2024</span>
+                            <h4>Sales Member</h4>
+                            <p class="exp-place">AIESEC</p>
+                            <p>Established partnerships for UN sustainability education projects.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-title">
-                <h2>Experience & Education</h2>
+    </div>
+</section>
+        
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>My Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <!-- Quizzard -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/project-quizzard.jpg" alt="Quizzard Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Quizzard</h3>
+                            <p>AI-powered educational platform enhancing learning through interactive document-based studying and adaptive quizzes. Developed during CodeStorm Hackathon.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Flask</span>
+                                <span class="project-tag">AI Models</span>
+                                <span class="project-tag">Chroma DB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/Quizzards" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="pages/project-quizzard.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lan Server Chat -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/project-chat.jpg" alt="Lan Server Chat Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Lan Server Chat</h3>
+                            <p>Multi-client chat application using C++ and Winsock2 library. The server, hosted on an Android device via Termux, broadcasts messages to all connected clients.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C++</span>
+                                <span class="project-tag">Winsock2</span>
+                                <span class="project-tag">Termux</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/Server_Client_Chat" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="pages/project-chat.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Museum Exploration -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/project-museum.jpg" alt="Museum Exploration Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Museum Exploration</h3>
+                            <p>3D digital tour of the Antipa Museum developed in C++ using OpenGL libraries, offering an interactive experience with 3D models, textures, and shaders.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C++</span>
+                                <span class="project-tag">OpenGL</span>
+                                <span class="project-tag">3D Graphics</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/AntipaMuseumProject" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://www.youtube.com/watch?v=_X5oz5oPRhQ" target="_blank" class="project-link"><i class="fab fa-youtube"></i> Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Student Management System -->
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="assets/images/project-sms.jpg" alt="Student Management System Project">
+                        </div>
+                        <div class="project-content">
+                            <h3>Student Management System</h3>
+                            <p>A full-stack application for managing student records using Java, Spring Boot, PostgreSQL database, and a web interface built with Thymeleaf.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Java</span>
+                                <span class="project-tag">Spring Boot</span>
+                                <span class="project-tag">PostgreSQL</span>
+                                <span class="project-tag">Thymeleaf</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/c-madalin/Springboot-Student-Catalog" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="pages/project-sms.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- View More Button -->
+                    <div class="view-more">
+                        <a href="pages/projects.html" class="btn btn-primary">View All Projects</a>
+                    </div>
+                </div>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">2023 - Present</div>
-                        <h3>Applied Informatics - UNITBV</h3>
-                        <p>Studying essential concepts like data structures, algorithms, and mathematical fundamentals at the Faculty of Mathematics and Computer Science in Brasov.</p>
-                    </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Me</h2>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>cazanmadalin12@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <p>0726 998 966</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Brasov, Romania</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">February 2025 - Present</div>
-                        <h3>CST Academy - Cornerstone Technologies</h3>
-                        <p>Learning Android application development using Android Studio, Java, and Kotlin, gaining a solid understanding of the mobile app development process.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">February 2025 - Present</div>
-                        <h3>Build the software, Build the future - Elektrobit</h3>
-                        <p>Hands-on course focused on software engineering, covering requirements engineering, software design, agile methodologies, and cybersecurity.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">October 2024 - Present</div>
-                        <h3>Teacher - Learning Refactored Association</h3>
-                        <p>Teaching Scratch to children as part of the CoderDojo initiative, helping young learners develop coding skills through interactive lessons.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">January 2024 - August 2024</div>
-                        <h3>Project Manager - AIESEC</h3>
-                        <p>Led a Global Volunteering project in a local school, serving as the primary point of contact between AIESEC and its partners, managing relationships and project objectives.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">October 2023 - January 2024</div>
-                        <h3>Sales Member - AIESEC</h3>
-                        <p>Established partnerships with potential collaborators to launch a Global Volunteering project that brought international volunteers to teach courses based on the UN's sustainability goals.</p>
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+        
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <p>&copy; 2025 Madalin Cazan. All Rights Reserved.</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
+                        <a href="pages/blog.html">Blog</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
 
+    <!-- Mobile Sidebar Overlay -->
+    <div class="sidebar-overlay"></div>
 
-
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Projects</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="assets/images/project-quizzard.jpg" alt="Quizzard Project">
-                    </div>
-                    <div class="project-content">
-                        <h3>Quizzard</h3>
-                        <p>AI-powered educational platform enhancing learning through interactive document-based studying and adaptive quizzes. Developed during CodeStorm Hackathon.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Flask</span>
-                            <span class="project-tag">AI Models</span>
-                            <span class="project-tag">Chroma DB</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/c-madalin/Quizzards" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="pages/project-quizzard.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="assets/images/project-chat.jpg" alt="Lan Server Chat Project">
-                    </div>
-                    <div class="project-content">
-                        <h3>Lan Server Chat</h3>
-                        <p>Multi-client chat application using C++ and Winsock2 library. The server, hosted on an Android device via Termux, broadcasts messages to all connected clients.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">Winsock2</span>
-                            <span class="project-tag">Termux</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/c-madalin/Server_Client_Chat" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="pages/project-chat.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="assets/images/project-museum.jpg" alt="Museum Exploration Project">
-                    </div>
-                    <div class="project-content">
-                        <h3>Museum Exploration</h3>
-                        <p>3D digital tour of the Antipa Museum developed in C++ using OpenGL libraries, offering an interactive experience with 3D models, textures, and shaders.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">OpenGL</span>
-                            <span class="project-tag">3D Graphics</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/c-madalin/AntipaMuseumProject" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://www.youtube.com/watch?v=_X5oz5oPRhQ" target="_blank" class="project-link"><i class="fab fa-youtube"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="assets/images/project-sms.jpg" alt="Student Management System Project">
-                    </div>
-                    <div class="project-content">
-                        <h3>Student Management System</h3>
-                        <p>A full-stack application for managing student records using Java, Spring Boot, PostgreSQL database, and a web interface built with Thymeleaf.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Java</span>
-                            <span class="project-tag">Spring Boot</span>
-                            <span class="project-tag">PostgreSQL</span>
-                            <span class="project-tag">Thymeleaf</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/c-madalin/Springboot-Student-Catalog" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="pages/project-sms.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="view-more">
-                    <a href="pages/projects.html" class="btn btn-primary">View All Projects</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Me</h2>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <p>cazanmadalin12@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <p>0726 998 966</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <p>Brasov, Romania</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p>&copy; 2025 Madalin Cazan. All Rights Reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="pages/blog.html">Blog</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 </body>
 </html>
