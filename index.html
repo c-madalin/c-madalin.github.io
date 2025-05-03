@@ -8,46 +8,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <img src="assets/images/poza_diploma.jpg" alt="Madalin Cazan" class="sidebar-avatar">
-            <h3>Madalin Cazan</h3>
-            <p>Student & Teacher</p>
-        </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="#about" class="sidebar-link"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#experience" class="sidebar-link"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="#projects" class="sidebar-link"><i class="fas fa-code"></i> Projects</a></li>
-                <li><a href="#contact" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-        <div class="sidebar-footer">
-            <div class="social-icons">
-                <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:cazanmadalin12@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </aside>
-
     <!-- Main Content -->
     <main class="main-content">
         <!-- Top Header with navigation -->
         <header class="main-header">
             <div class="container header-container">
-                <div class="logo">MC</div>
+                <a href="index.html" class="logo">MC</a>
                 <nav class="header-nav">
                     <ul>
                         <li><a href="index.html" class="active">Home</a></li>
                         <li><a href="pages/blog.html">Blog</a></li>
-                        <li><a href="pages/projects.html">All Projects</a></li>
+                        <li><a href="pages/projects.html">Projects</a></li>
                         <li><a href="pages/resume.html">Resume</a></li>
                     </ul>
                 </nav>
+                <div class="social-links header-social">
+                    <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
                 <div class="mobile-nav-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -58,11 +43,11 @@
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
+                    <img src="assets/images/poza_diploma.jpg" alt="Madalin Cazan" class="hero-avatar">
                     <h1>Madalin Cazan</h1>
                     <p>Student & Teacher | Applied Informatics</p>
                     <div class="hero-buttons">
-                        <a href="assets/CV_Madalin_Cazan.pdf" class="btn btn-primary" download>Download CV</a>
-                        <a href="#projects" class="btn btn-secondary">View My Projects</a>
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
                     </div>
                 </div>
             </div>
@@ -116,87 +101,86 @@
         </section>
         
         <!-- Experience & Education Section -->
-        <!-- Experience & Education Section with Simplified Timeline -->
-<section id="experience" class="experience section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Experience & Education</h2>
-        </div>
-        <div class="experience-container">
-            <!-- Education Timeline -->
-            <div class="experience-column">
-                <h3 class="column-title"><i class="fas fa-graduation-cap"></i> Education</h3>
-                <div class="exp-timeline">
-                    <div class="exp-item">
-                        <div class="exp-dot"></div>
-                        <div class="exp-content">
-                            <span class="exp-date">2023 - Present</span>
-                            <h4>Applied Informatics</h4>
-                            <p class="exp-place">Faculty of Mathematics and Computer Science, UNITBV</p>
-                            <p>Studying data structures, algorithms, and mathematical fundamentals at UNITBV Brasov.</p>
+        <section id="experience" class="experience section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Experience & Education</h2>
+                </div>
+                <div class="experience-container">
+                    <!-- Education Timeline -->
+                    <div class="experience-column">
+                        <h3 class="column-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <div class="exp-timeline">
+                            <div class="exp-item">
+                                <div class="exp-dot"></div>
+                                <div class="exp-content">
+                                    <span class="exp-date">2023 - Present</span>
+                                    <h4>Applied Informatics</h4>
+                                    <p class="exp-place">Faculty of Mathematics and Computer Science, UNITBV</p>
+                                    <p>Studying data structures, algorithms, and mathematical fundamentals at UNITBV Brasov.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="exp-item">
+                                <div class="exp-dot"></div>
+                                <div class="exp-content">
+                                    <span class="exp-date">February 2025 - Present</span>
+                                    <h4>CST Academy</h4>
+                                    <p class="exp-place">Cornerstone Technologies International</p>
+                                    <p>Learning Android development with Java and Kotlin.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="exp-item">
+                                <div class="exp-dot"></div>
+                                <div class="exp-content">
+                                    <span class="exp-date">February 2025 - Present</span>
+                                    <h4>Build the software, Build the future</h4>
+                                    <p class="exp-place">Elektrobit</p>
+                                    <p>Software engineering course covering requirements, design, and agile methodologies.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="exp-item">
-                        <div class="exp-dot"></div>
-                        <div class="exp-content">
-                            <span class="exp-date">February 2025 - Present</span>
-                            <h4>CST Academy</h4>
-                            <p class="exp-place">Cornerstone Technologies International</p>
-                            <p>Learning Android development with Java and Kotlin.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="exp-item">
-                        <div class="exp-dot"></div>
-                        <div class="exp-content">
-                            <span class="exp-date">February 2025 - Present</span>
-                            <h4>Build the software, Build the future</h4>
-                            <p class="exp-place">Elektrobit</p>
-                            <p>Software engineering course covering requirements, design, and agile methodologies.</p>
+                    <!-- Work Experience Timeline -->
+                    <div class="experience-column">
+                        <h3 class="column-title"><i class="fas fa-briefcase"></i> Experience</h3>
+                        <div class="exp-timeline">
+                            <div class="exp-item">
+                                <div class="exp-dot"></div>
+                                <div class="exp-content">
+                                    <span class="exp-date">October 2024 - Present</span>
+                                    <h4>Teacher</h4>
+                                    <p class="exp-place">Learning Refactored Association</p>
+                                    <p>Teaching Scratch to children as part of the CoderDojo initiative.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="exp-item">
+                                <div class="exp-dot"></div>
+                                <div class="exp-content">
+                                    <span class="exp-date">January 2024 - August 2024</span>
+                                    <h4>Project Manager</h4>
+                                    <p class="exp-place">AIESEC</p>
+                                    <p>Led a Global Volunteering project in a local school.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="exp-item">
+                                <div class="exp-dot"></div>
+                                <div class="exp-content">
+                                    <span class="exp-date">October 2023 - January 2024</span>
+                                    <h4>Sales Member</h4>
+                                    <p class="exp-place">AIESEC</p>
+                                    <p>Established partnerships for UN sustainability education projects.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Work Experience Timeline -->
-            <div class="experience-column">
-                <h3 class="column-title"><i class="fas fa-briefcase"></i> Experience</h3>
-                <div class="exp-timeline">
-                    <div class="exp-item">
-                        <div class="exp-dot"></div>
-                        <div class="exp-content">
-                            <span class="exp-date">October 2024 - Present</span>
-                            <h4>Teacher</h4>
-                            <p class="exp-place">Learning Refactored Association</p>
-                            <p>Teaching Scratch to children as part of the CoderDojo initiative.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="exp-item">
-                        <div class="exp-dot"></div>
-                        <div class="exp-content">
-                            <span class="exp-date">January 2024 - August 2024</span>
-                            <h4>Project Manager</h4>
-                            <p class="exp-place">AIESEC</p>
-                            <p>Led a Global Volunteering project in a local school.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="exp-item">
-                        <div class="exp-dot"></div>
-                        <div class="exp-content">
-                            <span class="exp-date">October 2023 - January 2024</span>
-                            <h4>Sales Member</h4>
-                            <p class="exp-place">AIESEC</p>
-                            <p>Established partnerships for UN sustainability education projects.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
         
         <!-- Projects Section -->
         <section id="projects" class="projects section">
@@ -294,15 +278,14 @@
             </div>
         </section>
         
-        <!-- Contact Section -->
+        <!-- Get In Touch Section -->
         <section id="contact" class="contact section">
             <div class="container">
                 <div class="section-title">
-                    <h2>Contact Me</h2>
+                    <h2>Get In Touch</h2>
                 </div>
                 <div class="contact-content">
                     <div class="contact-info">
-                        <h3>Get In Touch</h3>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <p>cazanmadalin12@gmail.com</p>
@@ -318,24 +301,8 @@
                         <div class="social-links">
                             <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                         </div>
-                    </div>
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
                     </div>
                 </div>
             </div>
@@ -354,15 +321,14 @@
                         <a href="#experience">Experience</a>
                         <a href="#projects">Projects</a>
                         <a href="pages/blog.html">Blog</a>
-                        <a href="#contact">Contact</a>
                     </div>
                 </div>
             </div>
         </footer>
     </main>
 
-    <!-- Mobile Sidebar Overlay -->
-    <div class="sidebar-overlay"></div>
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay"></div>
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>

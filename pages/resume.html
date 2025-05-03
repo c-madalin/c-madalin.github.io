@@ -10,46 +10,31 @@
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Resume specific styles -->
     <link rel="stylesheet" href="../css/resume.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <img src="../assets/images/poza_diploma.jpg" alt="Madalin Cazan" class="sidebar-avatar">
-            <h3>Madalin Cazan</h3>
-            <p>Student & Teacher</p>
-        </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="../index.html#about" class="sidebar-link"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="../index.html#experience" class="sidebar-link"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="../index.html#projects" class="sidebar-link"><i class="fas fa-code"></i> Projects</a></li>
-                <li><a href="../index.html#contact" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-        <div class="sidebar-footer">
-            <div class="social-icons">
-                <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:cazanmadalin12@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </aside>
-
     <!-- Main Content -->
     <main class="main-content">
         <!-- Top Header with navigation -->
         <header class="main-header">
             <div class="container header-container">
-                <div class="logo">MC</div>
+                <a href="../index.html" class="logo">MC</a>
                 <nav class="header-nav">
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="projects.html">All Projects</a></li>
+                        <li><a href="projects.html">Projects</a></li>
                         <li><a href="resume.html" class="active">Resume</a></li>
                     </ul>
                 </nav>
+                <div class="social-links header-social">
+                    <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
                 <div class="mobile-nav-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -61,15 +46,6 @@
             <div class="container">
                 <h1>My Resume</h1>
                 <p>A comprehensive overview of my skills, education, and professional experience</p>
-                
-                <div class="resume-buttons">
-                    <a href="../assets/CV_Madalin_Cazan.pdf" class="btn btn-primary" download>
-                        <i class="fas fa-download"></i> Download CV
-                    </a>
-                    <a href="../index.html#contact" class="btn btn-secondary">
-                        <i class="fas fa-envelope"></i> Contact Me
-                    </a>
-                </div>
             </div>
         </section>
         
@@ -448,15 +424,6 @@
             </div>
         </section>
         
-        <!-- Call To Action -->
-        <section class="resume-cta">
-            <div class="container">
-                <h2>Interested in Working Together?</h2>
-                <p>Feel free to reach out if you think we'd be a good match for collaboration.</p>
-                <a href="../index.html#contact" class="btn btn-primary">Contact Me</a>
-            </div>
-        </section>
-        
         <!-- Footer -->
         <footer class="main-footer">
             <div class="container">
@@ -470,15 +437,14 @@
                         <a href="../index.html#experience">Experience</a>
                         <a href="../index.html#projects">Projects</a>
                         <a href="blog.html">Blog</a>
-                        <a href="../index.html#contact">Contact</a>
                     </div>
                 </div>
             </div>
         </footer>
     </main>
 
-    <!-- Mobile Sidebar Overlay -->
-    <div class="sidebar-overlay"></div>
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay"></div>
 
     <!-- JavaScript -->
     <script src="../js/script.js"></script>

@@ -10,46 +10,31 @@
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Blog specific styles -->
     <link rel="stylesheet" href="../css/blog.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <img src="../assets/images/poza_diploma.jpg" alt="Madalin Cazan" class="sidebar-avatar">
-            <h3>Madalin Cazan</h3>
-            <p>Student & Teacher</p>
-        </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="../index.html#about" class="sidebar-link"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="../index.html#experience" class="sidebar-link"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="../index.html#projects" class="sidebar-link"><i class="fas fa-code"></i> Projects</a></li>
-                <li><a href="../index.html#contact" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-        <div class="sidebar-footer">
-            <div class="social-icons">
-                <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:cazanmadalin12@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </aside>
-
     <!-- Main Content -->
     <main class="main-content">
         <!-- Top Header with navigation -->
         <header class="main-header">
             <div class="container header-container">
-                <div class="logo">MC</div>
+                <a href="../index.html" class="logo">MC</a>
                 <nav class="header-nav">
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="blog.html" class="active">Blog</a></li>
-                        <li><a href="projects.html">All Projects</a></li>
+                        <li><a href="projects.html">Projects</a></li>
                         <li><a href="resume.html">Resume</a></li>
                     </ul>
                 </nav>
+                <div class="social-links header-social">
+                    <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
                 <div class="mobile-nav-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -65,7 +50,6 @@
                 <div class="blog-categories">
                     <div class="blog-category active">All</div>
                     <div class="blog-category">Programming</div>
-                    <div class="blog-category">Tech Tips</div>
                     <div class="blog-category">Teaching</div>
                     <div class="blog-category">Projects</div>
                 </div>
@@ -133,24 +117,6 @@
                     <!-- Blog Post 4 -->
                     <div class="blog-post">
                         <div class="blog-img">
-                            <img src="../assets/images/blog-server-termux.jpg" alt="Android Server">
-                        </div>
-                        <div class="blog-content">
-                            <h3>Setting Up a Server on Android with Termux</h3>
-                            <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> March 10, 2025</span>
-                                <span><i class="far fa-folder"></i> Tech Tips</span>
-                            </div>
-                            <div class="blog-excerpt">
-                                <p>Learn how to convert your Android device into a powerful server using Termux. This step-by-step guide covers installation, basic configuration, and how to host various services like web servers, chat applications, and even Minecraft servers.</p>
-                            </div>
-                            <a href="blog-termux-server.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 5 -->
-                    <div class="blog-post">
-                        <div class="blog-img">
                             <img src="../assets/images/blog-opengl.jpg" alt="OpenGL Tutorial">
                         </div>
                         <div class="blog-content">
@@ -166,7 +132,7 @@
                         </div>
                     </div>
                     
-                    <!-- Blog Post 6 -->
+                    <!-- Blog Post 5 -->
                     <div class="blog-post">
                         <div class="blog-img">
                             <img src="../assets/images/blog-ai-integration.jpg" alt="AI Integration">
@@ -210,15 +176,14 @@
                         <a href="../index.html#experience">Experience</a>
                         <a href="../index.html#projects">Projects</a>
                         <a href="blog.html">Blog</a>
-                        <a href="../index.html#contact">Contact</a>
                     </div>
                 </div>
             </div>
         </footer>
     </main>
 
-    <!-- Mobile Sidebar Overlay -->
-    <div class="sidebar-overlay"></div>
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay"></div>
 
     <!-- JavaScript -->
     <script src="../js/script.js"></script>

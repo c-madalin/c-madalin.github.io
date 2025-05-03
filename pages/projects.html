@@ -10,46 +10,31 @@
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Projects specific styles -->
     <link rel="stylesheet" href="../css/projects.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <img src="../assets/images/poza_diploma.jpg" alt="Madalin Cazan" class="sidebar-avatar">
-            <h3>Madalin Cazan</h3>
-            <p>Student & Teacher</p>
-        </div>
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="../index.html#about" class="sidebar-link"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="../index.html#experience" class="sidebar-link"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="../index.html#projects" class="sidebar-link"><i class="fas fa-code"></i> Projects</a></li>
-                <li><a href="../index.html#contact" class="sidebar-link"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-        <div class="sidebar-footer">
-            <div class="social-icons">
-                <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:cazanmadalin12@gmail.com"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </aside>
-
     <!-- Main Content -->
     <main class="main-content">
         <!-- Top Header with navigation -->
         <header class="main-header">
             <div class="container header-container">
-                <div class="logo">MC</div>
+                <a href="../index.html" class="logo">MC</a>
                 <nav class="header-nav">
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="projects.html" class="active">All Projects</a></li>
+                        <li><a href="projects.html" class="active">Projects</a></li>
                         <li><a href="resume.html">Resume</a></li>
                     </ul>
                 </nav>
+                <div class="social-links header-social">
+                    <a href="https://github.com/c-madalin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/cazan-cristian" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
                 <div class="mobile-nav-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -63,12 +48,12 @@
                 <p>A collection of personal and academic projects I've worked on</p>
                 
                 <div class="projects-filter">
-                    <div class="filter-button active" data-filter="all">All</div>
-                    <div class="filter-button" data-filter="cpp">C/C++</div>
-                    <div class="filter-button" data-filter="java">Java</div>
-                    <div class="filter-button" data-filter="ai">AI</div>
-                    <div class="filter-button" data-filter="web">Web</div>
-                    <div class="filter-button" data-filter="csharp">C#</div>
+                    <button class="filter-button active" data-filter="all">All</button>
+                    <button class="filter-button" data-filter="cpp">C/C++</button>
+                    <button class="filter-button" data-filter="java">Java</button>
+                    <button class="filter-button" data-filter="ai">AI</button>
+                    <button class="filter-button" data-filter="web">Web</button>
+                    <button class="filter-button" data-filter="csharp">C#</button>
                 </div>
             </div>
         </section>
@@ -243,26 +228,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Minecraft Server -->
-                    <div class="project-card" data-categories="systems">
-                        <div class="project-img">
-                            <img src="../assets/images/project-minecraft.jpg" alt="Minecraft Server Project">
-                        </div>
-                        <div class="project-content">
-                            <h3>Minecraft Server</h3>
-                            <p>Mobile Minecraft server hosted on an Android device using Termux, exploring the capabilities of running servers on mobile devices.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Termux</span>
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">Linux</span>
-                                <span class="tech-tag">Server Administration</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="project-minecraft.html" class="project-link"><i class="fas fa-eye"></i> Details</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -280,15 +245,14 @@
                         <a href="../index.html#experience">Experience</a>
                         <a href="../index.html#projects">Projects</a>
                         <a href="blog.html">Blog</a>
-                        <a href="../index.html#contact">Contact</a>
                     </div>
                 </div>
             </div>
         </footer>
     </main>
 
-    <!-- Mobile Sidebar Overlay -->
-    <div class="sidebar-overlay"></div>
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay"></div>
 
     <!-- JavaScript -->
     <script src="../js/script.js"></script>
