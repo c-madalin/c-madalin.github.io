@@ -7,11 +7,11 @@
 
 /* ====== Base Styles ====== */
 :root {
-    --primary-color: #2d3e50;
-    --secondary-color: #3498db;
-    --accent-color: #1abc9c;
+    --primary-color: #0A192F; /* Navy blue */
+    --secondary-color: #007BFF; /* Electric blue */
+    --accent-color: #4287f5; /* Lighter electric blue for accents */
     --light-color: #f8f9fa;
-    --dark-color: #212529;
+    --dark-color: #0A192F;
     --gray-color: #6c757d;
     --header-height: 70px;
     --font-sans: 'Poppins', sans-serif;
@@ -109,12 +109,12 @@ p {
 }
 
 .btn-primary {
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #16a085;
+    background-color: var(--accent-color);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -168,13 +168,18 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     border-radius: 50%;
     transition: transform 0.3s;
 }
 
 .logo:hover {
     transform: rotate(10deg);
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
 }
 
 .header-nav ul {
@@ -192,7 +197,7 @@ p {
 }
 
 .header-nav a:hover, .header-nav a.active {
-    color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 .header-nav a::after {
@@ -202,7 +207,7 @@ p {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     transition: width var(--transition-speed);
 }
 
@@ -213,6 +218,8 @@ p {
 .header-social {
     display: flex;
     gap: 15px;
+    align-items: center;
+    height: 100%;
 }
 
 .mobile-nav-toggle {
@@ -242,22 +249,41 @@ p {
 }
 
 /* ====== Hero Section ====== */
-.hero {
+.hero-header {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    padding: 150px 0 60px;
     text-align: center;
-    color: var(--light-color);
-    padding-top: var(--header-height);
+    color: white;
+}
+
+.hero-header h1 {
+    color: white;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    animation: fadeInDown 1s;
+}
+
+.hero-header p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s;
+}
+
+.hero {
+    padding: 80px 0;
+    background-color: #f9f9f9;
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .hero-avatar {
@@ -266,13 +292,13 @@ p {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 25px;
-    border: 5px solid var(--accent-color);
+    border: 5px solid var(--secondary-color);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hero h1 {
     margin-bottom: 1rem;
-    color: white;
+    color: var(--primary-color);
     animation: fadeInDown 1s;
 }
 
@@ -280,7 +306,7 @@ p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     animation: fadeInUp 1s;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--gray-color);
 }
 
 .hero-buttons {
@@ -312,7 +338,7 @@ p {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
 }
 
 /* ====== About Section ====== */
@@ -352,13 +378,13 @@ p {
     border-radius: 30px;
     font-size: 0.9rem;
     transition: all var(--transition-speed);
-    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
 }
 
 .skill-tag:hover {
     background-color: var(--accent-color);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(26, 188, 156, 0.4);
+    box-shadow: 0 5px 15px rgba(66, 135, 245, 0.4);
 }
 
 .hobbies {
@@ -383,7 +409,7 @@ p {
     position: absolute;
     left: 0;
     top: 5px;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     font-size: 1.2rem;
 }
 
@@ -405,12 +431,12 @@ p {
     gap: 10px;
     margin-bottom: 30px;
     padding-bottom: 10px;
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 2px solid var(--secondary-color);
     color: var(--primary-color);
 }
 
 .column-title i {
-    color: var(--accent-color);
+    color: var(--secondary-color);
     font-size: 1.5rem;
 }
 
@@ -446,7 +472,7 @@ p {
     position: absolute;
     width: 16px;
     height: 16px;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     border-radius: 50%;
     left: -8px;
     top: 5px;
@@ -456,7 +482,7 @@ p {
 
 .exp-date {
     display: inline-block;
-    background-color: var(--accent-color);
+    background-color: var(--secondary-color);
     color: white;
     padding: 3px 12px;
     border-radius: 20px;
@@ -550,7 +576,7 @@ p {
 }
 
 .project-tag {
-    background-color: rgba(52, 152, 219, 0.1);
+    background-color: rgba(0, 123, 255, 0.1);
     color: var(--secondary-color);
     padding: 5px 12px;
     border-radius: 20px;
@@ -568,7 +594,7 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     font-weight: 500;
     transition: color var(--transition-speed);
 }
@@ -612,7 +638,7 @@ p {
 
 .contact-item i {
     font-size: 1.5rem;
-    color: var(--accent-color);
+    color: var(--secondary-color);
     width: 30px;
     text-align: center;
 }
@@ -654,7 +680,7 @@ p {
 }
 
 .footer-links a:hover {
-    color: var(--accent-color);
+    color: var(--secondary-color);
 }
 
 /* ====== Mobile Menu Overlay ====== */
